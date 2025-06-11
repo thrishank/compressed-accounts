@@ -1,0 +1,24 @@
+[package]
+name = "counter"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "counter"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+
+[dependencies]
+anchor-lang = "0.31.0"
+light-sdk = { version = "0.12.0", features = ["anchor"] }
+light-hasher = { version = "3.0.0", features = ["solana"] }
+light-compressed-account = { version = "0.2.0" }
